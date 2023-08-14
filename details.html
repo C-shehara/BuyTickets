@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details | Buy Tickets</title>
+    <link rel="stylesheet" href="./CSS_styles/general.css">
+    <link rel="stylesheet" href="./CSS_styles/details.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#191970">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/css/intlTelInput.css">
+    <script src="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+  </head>
+  <body>
+    <!--Heading-->
+    <header class="coverPage">
+      <a class="home" href="./Hikkaduwa_hatchery.html">&lt;<span>Home</span></a>
+      <hr>
+      <h1>Buy <span>Tickets</span></h1>
+    </header>
+
+    <div class="sub-nav">
+      <span id="tickets">Tickets</span> > <span id="details">Details</span> >
+      <span id="payments">Payments</span> >
+      <span id="confirm">Confirmation</span>
+    </div>
+
+    <main>
+      <!--Details-->
+      <section class="details-sec">
+        <h2>Enter your details</h2>
+        <form id="detailsForm">
+          <label for="fullName">*Full Name:</label>
+          <input type="text" id="fullName" name="fullName" required>
+          <span id="fullNameError" class="errorMsg"></span>
+
+          <label for="mobileNumber">*Mobile Number:</label>
+          <div class="mobile-input">
+            <input
+              name="mobileNumber"
+              type="text"
+              id="mobileNumber"
+              maxlength="10"
+              minlength="10"
+              required
+          >
+
+            <span id="mobileNumberError" class="errorMsg"></span>
+          </div>
+
+          <label for="email">*Email:</label>
+          <input type="email" id="email" name="email" required>
+          <span id="emailError" class="errorMsg"></span>
+
+          <label for="confirmEmail">*Confirm Email:</label>
+          <input type="email" id="confirmEmail" name="confirmEmail" required>
+          <span id="confirmEmailError" class="errorMsg"></span>
+          <label for="gender">Gender:</label>
+          <select id="gender" name="gender">
+            <option disabled selected value="Not Specified">
+              Select Gender
+            </option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Unspecified">Prefer not to say</option>
+          </select>
+        </form>
+      </section>
+
+      <!--aside-->
+
+      <aside class="right">
+        <div class="summary-container">
+          <h2>Summary</h2>
+          <table class="summary" id="summary">
+            <tr>
+              <th>Date</th>
+              <td id="summaryDate"><!--current date--></td>
+            </tr>
+            <tr>
+              <th>Time</th>
+              <td id="summaryTime"></td>
+            </tr>
+            <tr>
+              <th>Duration</th>
+              <td id="summaryDuration"></td>
+            </tr>
+            <tr>
+              <th>Tickets</th>
+              <th>Charges</th>
+            </tr>
+            <tr id="slARow"></tr>
+            <tr id="slCRow"></tr>
+            <tr id="fARow"></tr>
+            <tr id="fCRow"></tr>
+            <tr id="iRow"></tr>
+            <tr id="Total">
+              <th>Total Payable</th>
+              <td id="summaryTotal"></td>
+            </tr>
+          </table>
+        </div>
+      </aside>
+      <button type="submit" id="continueBtn" disabled>
+        Continue with purchase
+      </button>
+    </main>
+    <footer>
+      <div class="f-social">
+        <a href="https://twitter.com/" target="_blank"
+          ><img src="./Assets/twitter.png" alt="twitter logo"
+      ></a>
+        <a href="https://web.facebook.com/ " target="_blank"
+          ><img src="./Assets/facebook.png" alt="facebook logo"
+      ></a>
+        <a href="https://www.instagram.com/" target="_blank"
+          ><img src="./Assets/instagram.png" alt="instagram logo"
+      ></a>
+
+        <a href="https://www.youtube.com/" target="_blank"
+          ><img src="./Assets/youtube.png" alt="youtube logo"
+      ></a>
+      </div>
+
+      <div>Site by CB009832</div>
+    </footer>
+
+    <script src="./details.js"></script>
+  </body>
+</html>

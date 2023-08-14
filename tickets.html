@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets | Buy Tickets</title>
+    <link rel="stylesheet" href="./CSS_styles/general.css">
+    <link rel="stylesheet" href="./CSS_styles/tickets.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#191970">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <!--Heading-->
+    <header class="coverPage">
+      <a class="home" href="./Hikkaduwa_hatchery.html">&lt;<span>Home</span></a>
+      <hr>
+      <h1>Buy <span>Tickets</span></h1>
+    </header>
+    <div class="sub-nav">
+      <span id="tickets">Tickets</span> > <span id="details">Details</span> >
+      <span id="payments">Payments</span> >
+      <span id="confirm">Confirmation</span>
+    </div>
+    <main>
+      <div class="form">
+        <!--Dates-->
+        <section id="dates-sec">
+          <h2>Date</h2>
+          <label for="date">Choose Visit Date:</label>
+          <input type="date" id="date" name="date" required>
+          <span id="dateError" class="errorMsg"></span>
+        </section>
+
+        <!--Guests-->
+        <section class="guests-sec">
+          <h2>Guests</h2>
+          <form class="guests">
+            <div class="ticket-category">
+              <label for="slAdult">SL Adult <span class="ageNote">(Above 15 years)</span>:</label>
+              <input type="number" id="slAdult" name="slAdult" min="0" value="0">
+              <span id="slAdultError" class="guestErrorMsg"></span>
+            </div>
+            <div class="ticket-category">
+              <label for="slChild">SL Child: <span class="ageNote">(5 to 14 years)</span></label>
+              <input type="number" id="slChild" name="slChild" min="0" value="0">
+              <span id="sLChildError" class="guestErrorMsg"></span>
+            </div>
+            <div class="ticket-category">
+              <label for="foreignerAdult">Foreigner Adult: <span class="ageNote">(Above 15 years)</span></label>
+              <input type="number" id="foreignerAdult" name="foreignerAdult" min="0" value="1">
+              <span id="fAdultError" class="guestErrorMsg"></span>
+            </div>
+            <div class="ticket-category">
+              <label for="foreignerChild">Foreigner Child: <span class="ageNote">(5 to 14 years)</span></label>
+              <input type="number" id="foreignerChild" name="foreignerChild" min="0" value="0">
+              <span id="fChildError" class="guestErrorMsg"></span>
+            </div>
+            <div class="ticket-category">
+              <label for="infant">Infant: <span class="ageNote">(Under 4 years)</span></label>
+              <input type="number" id="infant" name="infant" min="0" value="0">
+              <span id="infantError" class="guestErrorMsg"></span>
+            </div>
+          </form>
+        </section>
+        <section id="duration-sec">
+          <h2>Visit time</h2>
+          <p>You can book one or more time slots.</p>
+          <p class="smallNote">
+            NOTE: Click the first booking slot, then hold Shift and click the
+            last for multiple selections. On mobile, tap and drag across the
+            slots.
+          </p>
+          <select name="duration" id="durationSelect" size="5" multiple>
+            <option value="07.00 am to 08.00 am" selected>07.00 am - 08.00 am</option>
+            <option value="08.00 am to 09.00 am">08.00 am - 09.00 am</option>
+            <option value="09.00 am to 10.00 am">09.00 am - 10.00 am</option>
+            <option value="10.00 am to 11.00 am" class="peak">10.00 am - 11.00 am (Peak hour)</option>
+            <option value="11.00 am to 12.00 pm" class="peak">11.00 am - 12.00 pm (Peak hour)</option>
+            <option value="12.00 pm to 01.00 pm" class="peak">12.00 pm - 01.00 pm (Peak hour)</option>
+            <option value="01.00 pm to 02.00 pm">01.00 pm - 02.00 pm</option>
+            <option value="02.00 pm to 03.00 pm">02.00 pm - 03.00 pm</option>
+            <option value="03.00 pm to 04.00 pm" class="peak">03.00 pm - 04.00 pm (Peak hour)</option>
+            <option value="04.00 pm to 05.00 pm" class="peak">04.00 pm - 05.00 pm (Peak hour)</option>
+            <option value="05.00 pm to 06.00 pm" class="peak">05.00 pm - 06.00 pm (Peak hour)</option>
+          </select>
+          <div id="pricingTable">
+            <table>
+              <thead>
+                <tr>
+                  <th>Category</th>
+                  <th>Normal Hour Charge (USD)</th>
+                  <th>Peak Hour Charge (USD)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>SL Adult</td>
+                  <td>4</td>
+                  <td>6</td>
+                </tr>
+                <tr>
+                  <td>SL Child</td>
+                  <td>2</td>
+                  <td>3</td>
+                </tr>
+                <tr>
+                  <td>Foreigner Adult</td>
+                  <td>10</td>
+                  <td>13</td>
+                </tr>
+                <tr>
+                  <td>Foreigner Child</td>
+                  <td>5</td>
+                  <td>8</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+
+      <aside class="right">
+        <div class="summary-container">
+          <h2>Summary</h2>
+          <table class="summary" id="summary">
+            <tr>
+              <th>Date</th>
+              <td id="summaryDate"></td>
+            </tr>
+            <tr>
+              <th>Time</th>
+              <td id="summaryTime"></td>
+            </tr>
+            <tr>
+              <th>Duration</th>
+              <td id="summaryDuration"></td>
+            </tr>
+            <tr>
+              <th>Tickets</th>
+              <th>Charges</th>
+            </tr>
+            <tr id="slARow"></tr>
+            <tr id="slCRow"></tr>
+            <tr id="fARow"></tr>
+            <tr id="fCRow"></tr>
+            <tr id="iRow"></tr>
+            <tr id="Total">
+              <th>Total Payable</th>
+              <td id="summaryTotal"></td>
+            </tr>
+          </table>
+        </div>
+      </aside>
+      <button id="continueBtn" disabled>Continue with purchase</button>
+    </main>
+    <footer>
+      <div class="f-social">
+        <a href="https://twitter.com/" target="_blank"><img src="./Assets/twitter.png" alt="twitter logo"></a>
+        <a href="https://web.facebook.com/ " target="_blank"><img src="./Assets/facebook.png" alt="facebook logo"></a>
+        <a href="https://www.instagram.com/" target="_blank"><img src="./Assets/instagram.png" alt="instagram logo"></a>
+        <a href="https://www.youtube.com/" target="_blank"><img src="./Assets/youtube.png" alt="youtube logo"></a>
+      </div>
+      <div>Site by CB009832</div>
+    </footer>
+    <script src="./tickets.js"></script>
+  </body>
+</html>

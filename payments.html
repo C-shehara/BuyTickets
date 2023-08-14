@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | Buy Tickets</title>
+    <link rel="stylesheet" href="./CSS_styles/general.css">
+    <link rel="stylesheet" href="./CSS_styles/payment.css">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#191970">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="theme-color" content="#ffffff">
+  </head>
+  <body>
+    <!--Heading-->
+    <header class="coverPage">
+      <a class="home" href="./Hikkaduwa_hatchery.html">&lt;<span>Home</span></a>
+      <hr>
+      <h1>Buy <span>Tickets</span></h1>
+    </header>
+
+    <div class="sub-nav">
+      <span id="tickets">Tickets</span> > <span id="details">Details</span> >
+      <span id="payments">Payments</span> >
+      <span id="confirm">Confirmation</span>
+    </div>
+
+    <main>
+      <section class="payment-sec">
+        <h2>Payment details</h2>
+        <form id="paymentForm">
+          <label for="cardNumber">*Card number:</label>
+          <input
+            type="text"
+            id="cardNumber"
+            name="cardNumber"
+            placeholder="xxxxxxxxxxxxxxxx"
+            maxlength="16"
+            required
+         >
+          <span id="cardNumberError" class="errorMsg"></span>
+          <label for="expiryDate">*Expiry date:</label>
+          <input
+            type="text"
+            id="expiryDate"
+            name="expiryDate"
+            placeholder="MM/YY"
+            maxlength="5"
+            required
+         >
+          <span id="expiryDateError" class="errorMsg"></span>
+          <label for="cvc">*CVC / CVV:</label>
+          <input type="text" id="cvc" name="cvc" maxlength="3" required>
+          <span id="cvcError" class="errorMsg"></span>
+          <label for="nameOnCard">*Name on card:</label>
+          <input type="text" id="nameOnCard" name="nameOnCard" required>
+          <span id="nameOnCardError" class="errorMsg"></span>
+        </form>
+      </section>
+
+      <!--aside-->
+      <aside class="right">
+        <div class="summary-container">
+          <h2>Summary</h2>
+          <table class="summary" id="summary">
+            <tr>
+              <th>Date</th>
+              <td id="summaryDate"><!--current date--></td>
+            </tr>
+            <tr>
+              <th>Time</th>
+              <td id="summaryTime"></td>
+            </tr>
+            <tr>
+              <th>Duration</th>
+              <td id="summaryDuration"></td>
+            </tr>
+            <tr>
+              <th>Tickets</th>
+              <th>Charges</th>
+            </tr>
+            <tr id="slARow"></tr>
+            <tr id="slCRow"></tr>
+            <tr id="fARow"></tr>
+            <tr id="fCRow"></tr>
+            <tr id="iRow"></tr>
+            <tr id="Total">
+              <th>Total Payable</th>
+              <td id="summaryTotal"></td>
+            </tr>
+          </table>
+        </div>
+      </aside>
+      <button id="payBtn" disabled>Pay <span id="total"></span></button>
+    </main>
+    <footer>
+      <div class="f-social">
+        <a href="https://twitter.com/" target="_blank"
+          ><img src="./Assets/twitter.png" alt="twitter logo"
+       ></a>
+        <a href="https://web.facebook.com/ " target="_blank"
+          ><img src="./Assets/facebook.png" alt="facebook logo"
+       ></a>
+        <a href="https://www.instagram.com/" target="_blank"
+          ><img src="./Assets/instagram.png" alt="instagram logo"
+       ></a>
+
+        <a href="https://www.youtube.com/" target="_blank"
+          ><img src="./Assets/youtube.png" alt="youtube logo"
+       ></a>
+      </div>
+
+      <div>Site by CB009832</div>
+    </footer>
+
+    <script src="./payments.js"></script>
+  </body>
+</html>

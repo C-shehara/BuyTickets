@@ -1,0 +1,189 @@
+body {
+  background-color: var(--clr-clearblue);
+}
+main {
+  display: grid;
+  margin-top: 50px;
+  margin-bottom: 3rem;
+}
+.home {
+  color: rgb(226, 226, 226);
+  text-decoration: none;
+  padding: 2% 5%;
+  padding-left: 0;
+  font-size: 2rem;
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 9px;
+}
+.home:hover {
+  text-decoration: underline;
+}
+.home span{
+  display: none;
+}
+.sub-nav {
+  background-color: #071923;
+  display: grid;
+  grid-template-columns: auto auto ;
+  justify-content: center;
+  text-align: center;
+  column-gap: 5%;
+  color: #071923;
+  padding: 5% 10%;
+}
+.sub-nav span {
+  color: var(--clr-selectaccent);
+  text-decoration: none;
+ 
+}
+
+#tickets,
+#details,
+#payments {
+  color: white;
+}
+.payment-sec,
+.right {
+  padding: 7%;
+  margin-bottom: 1rem;
+}
+.payment-sec {
+  background-color: var(--clr-white);
+}
+.right {
+  background-color: #ebebeb;
+}
+hr {
+  border: 0.7rem solid var(--clr-lightblue);
+  background-color: var(--clr-lightblue);
+  width: 1.4rem;
+  height: 4rem;
+  margin: 0;
+  display: inline-block;
+}
+.coverPage {
+  background-color: var(--clr-midblue);
+  padding: 4% 0;
+  padding-left: 10%;
+
+  display: flex;
+}
+h1 {
+  font-size: var(--h1-size);
+  margin-inline: 5%;
+  color: var(--clr-white);
+}
+h1 span {
+  color: var(--clr-lightblue);
+}
+h2 {
+  text-transform: uppercase;
+}
+section {
+  padding-bottom: 3rem;
+}
+/* Styles for payment section */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0;
+}
+
+input[type="text"] {
+  width: 250px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+label {
+  margin: 10px 0;
+}
+input,
+select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#payBtn {
+  padding: 15px ;
+  background-color: #071923;
+  color: white;
+  border: none;
+  width: 200px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+#payBtn:disabled {
+  background-color: #eeeded;
+  color: rgb(185, 185, 185);
+  cursor: not-allowed;
+}
+
+#payBtn:enabled:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(7, 25, 35, 0.959);
+}
+.errorMsg {
+  color: red;
+  font-size: 0.85rem;
+  display: inline;
+}
+aside {
+  position: relative;
+}
+
+.summary-container {
+  position: sticky;
+  top: 20px;
+  z-index: 1; 
+}
+@media only screen and (width<481px) {
+}
+@media only screen and (width>= 481px) {
+  .book {
+    margin-inline: 0;
+    margin-left: 10%;
+  }
+  .sub-nav {
+    grid-template-columns: auto auto auto auto auto auto auto ;
+    color: white;
+    padding: 5% 10%;
+  }
+  .sub-nav span {
+    color: var(--clr-selectaccent);
+    text-decoration: none;
+   
+  }
+  main {
+    padding-inline: 10%;
+  }
+  input[type="number"],
+  select {
+    width: auto;
+  }
+}
+@media only screen and (width>= 768px) {
+  .home {
+    font-size: 1rem;
+  }
+  
+  .home span{
+    display: block;
+  }
+}
+@media only screen and (width>= 993px) {
+  main {
+    grid-template-columns: 1fr 400px;
+    column-gap: 3%;
+  }
+}
